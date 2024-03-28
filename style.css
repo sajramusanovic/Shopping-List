@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
+  }
+  
+  body {
+    background: #eee;
+    margin-top: 90px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  button {
+    cursor: pointer;
+    border: none;
+    padding: 5px 10px;
+    font-weight: 500;
+  }
+  
+  .container {
+    width: 480px;
+    max-width: 90%;
+    margin: auto;
+  }
+  
+  .shopping-form {
+    padding: 1rem;
+    background: #FE7A36;
+    display: flex;
+    align-items: stretch;
+    gap: 5px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .shopping-form input {
+    flex: 1;
+    padding: 5px 10px;
+    border-radius: inherit;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
+  
+  .shopping-form button {
+    padding: 5px 15px;
+    border-radius: inherit;
+    background: #000;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  .shopping-filter button {
+    background: #ddd;
+    border-radius: 5px;
+  }
+  
+  .shopping-filter button:hover,
+  .shopping-filter button.active {
+    background: #000;
+    color: #fff;
+  }
+  
+  .shopping-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .shopping-list li {
+    background: #fff;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .shopping-list li .item-name {
+    flex: 1;
+    padding: 5px 10px;
+  }
+  
+  .shopping-list li[data-completed] .item-name {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .shopping-list li .item-name[contenteditable="true"] {
+    outline-color: yellowgreen;
+  }
+  
+  .shopping-list li .delete-button {
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: #f00;
+    background: transparent;
+    transform: scale(0);
+    transition: transform 200ms;
+  }
+  
+  .shopping-list li:hover .delete-button {
+    transform: scale(1);
+  }
+  
+  .shopping-list li .drag-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 1.5rem;
+    line-height: 20px;
+    color: #ccc;
+    text-align: center;
+    cursor: move;
+  }
+  
+  .shopping-list li[draggable="false"] .drag-icon {
+    cursor: not-allowed;
+  }
+  
+  .shopping-action button {
+    color: #777;
+  }
+  
+  .shopping-action button:hover {
+    color: #000;
+  }
+  
+  .shopping-notice {
+    padding: 10px;
+    background: #000;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: none;
+    color:#fff;
+  }
+  
+  .shopping-notice.show {
+    display: block;
+  }
+  
+  .shopping-notice.show ~ .shopping-filter,
+  .shopping-notice.show ~ .shopping-action {
+    display: none;
+  }

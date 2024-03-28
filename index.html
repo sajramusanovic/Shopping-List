@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Shopping List</h1>
+
+    <div class="container">
+      <form class="shopping-form">
+        <input type="text" id="item" placeholder="Enter item name" />
+        <button type="submit">&plus;</button>
+      </form>
+
+      <div class="shopping-notice">There are no items.</div>
+
+      <div class="shopping-filter">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="incomplete">Incomplete</button>
+        <button data-filter="completed">Completed</button>
+      </div>
+
+      <ul class="shopping-list"></ul>
+
+      <div class="shopping-action">
+        <button data-clear="all">Clear All</button>
+        <button data-clear="completed">Clear Completed</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
